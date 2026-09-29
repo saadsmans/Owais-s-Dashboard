@@ -1,0 +1,6 @@
+{
+  "name": "Bhola Mohammed Owais - AI & Data Science Portfolio",
+  "description": "Interactive multi-page portfolio and data visualization laboratory for Bhola Mohammed Owais, B.Tech AI undergraduate, featuring live RAG, multimodal computer vision, and geospatial systems.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
