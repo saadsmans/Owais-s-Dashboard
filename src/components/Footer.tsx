@@ -1,6 +1,6 @@
 import React from 'react';
 import { PORTFOLIO_OWNER } from '../data/portfolioData';
-import { Linkedin, Github, Mail, Phone, MapPin, GraduationCap } from 'lucide-react';
+import { Linkedin, Github, Mail, Phone, MapPin, GraduationCap, ExternalLink } from 'lucide-react';
 
 interface FooterProps {
   onNavigate: (tab: string) => void;
@@ -116,12 +116,24 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
           </div>
         </div>
 
-        <div className="pt-8 border-t border-slate-100 dark:border-slate-900 flex flex-wrap items-center justify-between gap-4 text-[11px] text-slate-500 dark:text-slate-400">
+        {/* Bottom Bar with attribution */}
+        <div className="pt-8 border-t border-slate-100 dark:border-slate-900 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-slate-500 dark:text-slate-400">
           <div>
             © {new Date().getFullYear()} {PORTFOLIO_OWNER.name} · Parul University B.Tech Artificial Intelligence
           </div>
-          <div>
-            Data Science & AI Engineering Portfolio · Vadodara, Gujarat, India
+          
+          <div className="flex flex-wrap items-center gap-3 sm:gap-4">
+            <span>Vadodara, Gujarat, India</span>
+            <span aria-hidden="true" className="text-slate-300 dark:text-slate-700">·</span>
+            <a
+              href="https://clickncreate.co.uk"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 font-medium text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-cyan-400 hover:underline transition-colors"
+            >
+              <span>Made by Saad M @Click N Create</span>
+              <ExternalLink className="w-3 h-3 opacity-60" />
+            </a>
           </div>
         </div>
       </div>
